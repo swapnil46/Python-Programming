@@ -24,6 +24,19 @@ import sys
 
 def countApplesAndOranges(s, t, a, b, apples, oranges):
     # Write your code here
+    m=len(apples)
+    n=len(oranges)
+    ca=0
+    cb=0
+    for i in range(m):
+        if (apples[i]+a >= s and apples[i]+a <= t):
+            ca+=1
+    for j in range(n):
+        if(oranges[j]+b<=t and oranges[j]+b>=s):
+            cb+=1
+    print(ca)
+    print(cb)
+    
 
 if __name__ == '__main__':
     first_multiple_input = input().rstrip().split()
